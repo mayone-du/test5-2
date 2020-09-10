@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/684548cccd.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+  <title>課題5-2</title>
+</head>
+<body>
+  <div class="wrap">
+    <header class="header">
+      <div class="video-box">
+        <video id="video" src="images/airbnb.webm" muted class="video"></video>
+        <button class="play" onclick="Play()">再生 ▶︎</button>
+        <button class="pause" onclick="Pause()">停止 ＝</button>
+      </div>
+      <!-- ナビバー -->
+      <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="#">
+          <i class="fab fa-airbnb fa-2x"></i>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">
+                <i class="fas fa-globe"></i>
+                日本語 (JP)
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">¥ JPY</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">ホストをはじめる</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">ヘルプ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">登録する</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">ログイン</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <!-- ナビバーsp -->
+      <input type="checkbox" id="checkbox">
+      <label for="checkbox">
+        <i class="fab fa-airbnb text-white fa-2x sp-logo">^</i>
+      </label>
+      <!-- クリック時 -->
+      <div class="sp-checked">
+        <label for="checkbox">
+          <i class="fab fa-airbnb text-danger fa-2x sp-logo">^</i>
+        </label>
+        <div class="sp-ul">
+          <div class="sp-list">
+            <ul>
+              <li class="sp-list-a"><a href="#">ホーム</a></li>
+            </ul>
+          </div>
+          <div class="sp-list">
+            <ul>
+              <li class="sp-list-a"><a href="#">アプリをダウンロード</a></li>
+              <li class="sp-list-a"><a href="#">友達を紹介する</a></li>
+              <li class="sp-list-a"><a href="#">ホストを紹介</a></li>
+              <li class="sp-list-a"><a href="#">Airbnb紹介ビジネスプログラム</a></li>
+            </ul>
+          </div>
+          <div class="sp-list">
+            <ul>
+              <li class="sp-list-a"><a href="#">言語<br><span class="list-bottom">日本語(JP)</span></a></li>
+              <li class="sp-list-a"><a href="#">通貨<br><span class="list-bottom">￥JPY</span></a></li>
+            </ul>
+          </div>
+          <div class="sp-list">
+            <ul>
+              <li class="sp-list-a"><a href="#">お部屋を掲載<br><span class="list-bottom">月当たり最大¥90,743の利益</span></a></li>
+              <li class="sp-list-a"><a href="#">お家のホスティングホスティングについて</a></li>
+              <li class="sp-list-a"><a href="#">体験をホストする<br><span class="list-bottom">好きを仕事に</span></a></li>
+            </ul>
+          </div>
+          <div class="sp-list">
+            <ul>
+              <li class="sp-list-a"><a href="#">ヘルプ</a></li>
+              <li class="sp-list-a"><a href="#">登録する</a></li>
+              <li class="sp-list-a"><a href="#">ログイン</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- フォーム -->
+      <div class="content">
+        <div class="h1">世界の果てまで、アットホーム</div>
+        <div class="p my-4"><a class="form-a" href="#">Airbnbビジネスプログラムの動画を見る ▶︎</a></div>
+        <form class="form-1" action="">
+          <label for="input">まずは仕事用メールアドレスの入力から</label>
+          <div class="input-group">
+            <input id="input" type="email" class="form-control input-mail">
+            <div class="input-button">
+              <button class="btn">メールアドレス</button>
+            </div>
+          </div>
+        </form>
+        <div class="form-p mt-3">出張管理をご担当ですか？ <a class="form-a" href="#">もっと詳しく ＞</a></div>
+      </div>
+      <!-- スマホ -->
+      <div class="sp-form container">
+        <form class="sp-form" action="">
+          <label for="inputsp">まずは仕事用メールアドレスの入力から</label>
+          <div class="input-group border">
+            <input id="inputsp" type="email" class="form-control input-mail">
+            <div class="input-button">
+              <button class="btn">メールアドレス</button>
+            </div>
+          </div>
+        </form>
+        <div class="sp-form-p mt-3">出張管理をご担当ですか？<br><a class="sp-form-a" href="#">もっと詳しく ＞</a></div>
+      </div>
+    </header>
+    <main>
+      <!-- セクション1 -->
+      <section class="section-1">
+        <div class="container">
+          <div class="sec-1-h2 text-center mt-5 pt-5">最高の仕事に必要なものすべてを完備</div>
+          <div class="row">
+            <div class="col-md-4 text-center">
+              <img class="sec-1-img" src="images/sec1-1.jpg" alt="">
+              <div class="sec-1-p">高評価の宿泊先＆デザイナーズホテル</div>
+            </div>
+            <div class="col-md-4 text-center">
+              <img class="sec-1-img" src="images/sec1-2.jpg" alt="">
+              <div class="sec-1-p">チームビルディング体験</div>
+            </div>
+            <div class="col-md-4 text-center">
+              <img class="sec-1-img" src="images/sec1-3.jpg" alt="">
+              <div class="sec-1-p">コラボを育むスペース</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- spセクション２ -->
+      <section class="sp-section-2 mt-5">
+        <div class="sec-2-row">
+          <div class="sp-sec-text-bg-1">
+            <div class="sp-text-box">
+              <div class="sp-sec-2-h2">出張先でも、アットホーム</div>
+              <div class="p">出張のときも、新天地に異動のときも安心。他の出張者が5つ星評価をつけたお部屋やデザイナーズホテルを探しましょう。</div>
+              <div class="p"><a class="sec-2-a" href="#">仕事用スペースを完備した宿泊先を検索 ＞</a></div>
+            </div>
+          </div>
+        </div>
+      </section>
+          <!-- セクション2 -->
+      <section class="section-2">
+        <div class="sec-2-row">
+          <div class="sec-2-img-box">
+            <img class="sec-2-img" src="images/sec2-1.jpg" alt="">
+          </div>
+          <div class="sec-text-bg-1">
+            <div class="text-box">
+              <div class="sec-2-h2">出張先でも、アットホーム</div>
+              <div class="p">出張のときも、新天地に異動のときも安心。他の出張者が5つ星評価をつけたお部屋やデザイナーズホテルを探しましょう。</div>
+              <div class="p"><a class="sec-2-a" href="#">仕事用スペースを完備した宿泊先を検索 ＞</a></div>
+            </div>
+          </div>
+        </div>
+        <!-- 2r -->
+        <div class="sec-2-row">
+          <div class="sec-text-bg-2">
+            <div class="text-box-2">
+              <div class="sec-2-h2">チームの心をひとつに</div>
+              <div class="p">ラーメン作り教室やカヌーレッスンに参加。普段オフィスでは目にできない同僚たちの意外な面に触れ、深いレベルでつながれます。</div>
+              <div class="p"><a class="sec-2r-a" href="#">Airbnbの「体験」を検索 ＞</a></div>
+            </div>
+          </div>
+          <div class="sec-2-img-box">
+            <img class="sec-2-img" src="images/sec2-2.jpg" alt="">
+          </div>
+        </div>
+        <!-- sp3r -->
+        <section class="sp-section-2 mt-5">
+          <div class="sec-2-row">
+            <div class="sp-sec-text-bg-1">
+              <div class="sp-text-box">
+                <div class="sp-sec-2-h2">創造力をかきたてるスペース</div>
+                <div class="p">煮詰まったら1日オフサイトで気分を変えてみませんか？ひらめきが湧く環境で、チームの生産性を高めましょう。
+                </div>
+                <div class="p"><a class="sec-2-a" href="#">Wi-Fi完備の宿泊先を見る ＞</a></div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- 3r -->
+        <div class="sec-2-row">
+          <div class="sec-2-img-box">
+            <img class="sec-2-img" src="images/sec2-3.jpg" alt="">
+          </div>
+          <div class="sec-text-bg-1">
+            <div class="text-box">
+              <div class="sec-2-h2">創造力をかきたてるスペース</div>
+              <div class="p">煮詰まったら1日オフサイトで気分を変えてみませんか？ひらめきが湧く環境で、チームの生産性を高めましょう。</div>
+              <div class="p"><a class="sec-2-a" href="#">Wi-Fi完備の宿泊先を見る ＞</a></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- オプション -->
+      <div class="row option-row">
+        <div class="option">
+          <div class="h3">安全第一のシステム</div>
+          <div class="p">セキュアな支払いシステムから経験者のレビューまで、Airbnbは安全中心のシステムです。</div>
+          <div class="p"><a class="sec-2r-a" href="#">もっと詳しく ＞</a></div>
+        </div>
+        <div class="option-2">
+          <div class="h3">グローバルカスタマーサポート</div>
+          <div class="p">専門スタッフが、年中無休で営業時間内に11言語でサポートいたします。</div>
+          <div class="p"><a class="sec-2r-a" href="#">もっと詳しく ＞</a></div>
+        </div>
+      </div>
+      <!-- セクション3 -->
+      <section class="section-3">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <img class="sec-3-img" src="images/sec3-1.jpg" alt="">
+            </div>
+            <div class="col-md-6 msg-box">
+              <div class="msgbox">
+                <div class="msg">
+                  「Airbnbは自活できるのがいいですね。毎晩外食しなくても、みんなで好きなものを料理できるし、とても出張とは思えないほど現地に根を下ろせます」
+                </div>
+                <div class="msger">
+                  MARTA KUTT様
+                  <br><span class="msger-bottom">Transferwise社マネジャー</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- フォーム2 -->
+      <div class="row form-row">
+        <div class="form-2">
+          <div class="form-h1">働き方を変えたいなら、Airbnbです</div>
+          <form class="second-form" action="">
+            <label class="form-2-label" for="input2">まずは仕事用メールアドレスの入力から</label>
+            <div class="input-group">
+              <input id="input2" type="email" class="form-control input-mail">
+              <div class="input-button">
+                <button class="btn">メールアドレス</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="row form-row-under">
+        <div class="form-2-h">出張管理をご担当ですか？</div>
+        <div class="form-2-p">こんなにある、Airbnbビジネスプログラム法人企業様のメリット。</div>
+        <div class="form-2-a"><a class="sec-2-a" href="#">もっと詳しく＞</a></div>
+      </div>
+    </main>
+    <!-- フッター -->
+    <footer class="footer border-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 border-bottom">
+            <div class="f-l-title mt-5">
+              企業情報
+            </div>
+            <div class="footer-list">
+              <ul>
+                <li><a href="#">Airbnbのご利用方法</a></li>
+                <li><a href="#">ニュースルーム</a></li>
+                <li><a href="#">Airbnb Plus</a></li>
+                <li><a href="#">Airbnb Luxe</a></li>
+                <li><a href="#">HotelTonight</a></li>
+                <li><a href="#">Airbnbビジネスプログラム</a></li>
+                <li><a href="#">オリンピック</a></li>
+                <li><a href="#">採用情報</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 border-bottom">
+            <div class="f-l-title mt-5">
+              コミュニティ
+            </div>
+            <div class="footer-list">
+              <ul>
+                <li><a href="#">ダイバーシティ＆ビロンギング</a></li>
+                <li><a href="#">アクセシビリティ対応</a></li>
+                <li><a href="#">Airbnbアソシエイト</a></li>
+                <li><a href="#">お友達を招待</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 border-bottom">
+            <div class="f-l-title mt-5">
+              ホスト
+            </div>
+            <div class="footer-list">
+              <ul>
+                <li><a href="#">お部屋を掲載</a></li>
+                <li><a href="#">オンライン体験をホストする</a></li>
+                <li><a href="#">体験をホストする</a></li>
+                <li><a href="#">CEOブライアン・チェスキーからのメッセージ</a></li>
+                <li><a href="#">責任あるホスティング</a></li>
+                <li><a href="#">オープンホーム</a></li>
+                <li><a href="#">リソースセンター</a></li>
+                <li><a href="#">コミュニティセンター</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 border-bottom">
+            <div class="f-l-title mt-5">
+              サポート
+            </div>
+            <div class="footer-list">
+              <ul>
+                <li><a href="#">新型コロナウイルスに関する最新情報</a></li>
+                <li><a href="#">ヘルプセンター</a></li>
+                <li><a href="#">キャンセルオプション</a></li>
+                <li><a href="#">近隣コミュニティサポート</a></li>
+                <li><a href="#">信頼＆安全</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- 下段 -->
+        <div class="row mt-3 pb-5 px-2">
+          <div class="col-lg-8">
+            <div class="f-text">
+              <a class="f-a" href="#">
+                Airbnb Global Services Limited
+                <br>観光庁長官(01)第S0001号(2018年6月15日-2023年6月14日)
+              </a>
+                <br>© 2020 Airbnb, Inc. All rights reserved
+              <span class="f-space">·</span><a class="f-a" href="#">プライバシー</a>
+              <span class="f-space">·</span><a class="f-a" href="#">利用規約</a>
+              <span class="f-space">·</span><a class="f-a" href="#">サイトマップ</a>
+              <span class="f-space">·</span><a class="f-a" href="#">企業情報</a>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="footer-logo">
+              <a class="f-a-last" href="#">
+                <i class="fas fa-globe-americas mr-1 ml-5"></i>日本語 (JP)
+              </a>
+              <a class="f-a-last" href="#">
+                <i class="fas fa-yen-sign mr-1 ml-4"></i>JPY
+              </a>
+              <a class="f-a-logo mr-2 ml-5" href="#">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a class="f-a-logo mx-2" href="#">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a class="f-a-logo mx-2" href="#">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  <script src="index.js"></script>
+</body>
+</html>

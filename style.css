@@ -1,0 +1,749 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  color: #484848;
+}
+
+label{
+  cursor: pointer;
+}
+
+.wrap{
+  overflow: hidden;
+}
+
+/* 背景動画 */
+.video{
+  width: auto;
+  height: auto;
+  position: relative;
+  z-index: -100;
+  min-width: 100%;
+  min-height: 100%;
+  top: 0;
+  background-size: cover;
+}
+
+.video-box{
+  position: relative;
+}
+
+.play{
+  position: absolute;
+  right: 5%;
+  bottom: 15%;
+  z-index: 100;
+  width: 100px;
+  padding: 10px 20px;
+  color: #fff;
+  background-color: rgba( 0, 0, 0, 0);
+  font-weight: bold;
+  border: 2px solid white;
+  border-radius: 4px;
+}
+
+
+.pause{
+  position: absolute;
+  right: 5%;
+  bottom: 5%;
+  z-index: 100;
+  width: 100px;
+  padding: 10px 20px;
+  color: #fff;
+  background-color: rgba( 0, 0, 0, 0);
+  font-weight: bold;
+  border: 2px solid white;
+  border-radius: 4px;
+}
+
+
+/* ナビ */
+.navbar{
+  position: absolute;
+  top: 0;
+  display: flex;
+  width: 100%;
+  margin: auto;
+}
+
+.navbar a{
+  color: white;
+  padding: 10px;
+}
+
+.nav-item{
+  padding: 10px;
+}
+
+.navbar .nav-item:hover{
+  border-bottom: 2px solid white;
+}
+
+/* フォーム */
+.content{
+  position: absolute;
+  top: 40%;
+  left: 30%;
+  transform: translate(-50%, -30%);
+  color: #fff;
+  width: 510px;
+  padding: 20px;
+}
+
+.input-button{
+  background-color: #fff;
+  padding: 5px 10px;
+  margin: auto;
+  height: 3em;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.input-button .btn{
+  background-color: #bedadb;
+  color: white;
+}
+
+.input-mail{
+  height: 3em;
+  border: none;
+  border-radius: 5px;
+}
+
+.input-mail:valid ~ .input-button .btn{
+  background-color: #008489;
+}
+
+
+
+
+
+.form-a{
+  color: white;
+  text-decoration: none;
+}
+
+.form-a:hover{
+  color: white;
+  text-decoration: underline;
+}
+
+
+
+
+.h1{
+  font-size: 46px;
+  font-weight: 800;
+}
+
+.sec-1-p{
+  padding: 20px 0;
+  font-size: 18px;
+}
+
+
+
+
+/* セクション1 */
+.sec-1-h2{
+  font-size: 46px;
+  color: #484848;
+}
+
+.sec-1-img{
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+}
+
+
+
+/* セクション2 */
+.section-2{
+  margin-top: 80px;
+}
+
+.sec-2-row{
+  display: flex;
+  margin-bottom: 18px;
+}
+
+.sec-2-img-box{
+  width: 40%;
+  margin: 0 18px;
+}
+
+.sec-2-img{
+  width: 100%;
+  height: 630px;
+  object-fit: cover;
+}
+
+
+.sec-text-bg-1{
+  background-color: #EBEBEB;
+  margin-right: 18px;
+  position: relative;
+  height: 630px;
+  width: 60%;
+}
+
+.sec-text-bg-2{
+  background-color: #036B70;
+  margin-left: 18px;
+  height: 630px;
+  width: 60%;
+  position: relative;
+}
+
+.text-box{
+  width: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.text-box-2{
+  color: white;
+  width: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.sec-2-h2{
+  font-size: 46px;
+}
+
+.sec-2-a{
+  color: #008489;
+}
+.sec-2-a:hover{
+  color: #008489;
+}
+
+.sec-2r-a{
+  color: white;
+}
+.sec-2r-a:hover{
+  color: white;
+}
+
+
+
+/* オプション */
+.option-row{
+  background-color: #036B70;
+  color: white;
+  margin: 100px 0;
+  padding: 65px 170px;
+  display: flex;
+}
+
+.option{
+  width: 400px;
+  margin-right: auto;
+}
+
+.option-2{
+  width: 400px;
+  margin-left: auto;
+}
+
+
+/* セクション3 */
+.section-3{
+  margin-bottom: 100px;
+}
+
+.sec-3-img{
+  width: 100%;
+  height: 630px;
+  object-fit: cover;
+}
+
+.msg-box{
+  background-color: #EBEBEB;
+  height: 630px;
+  line-height: 2;
+  font-size: 24px;
+  position: relative;
+}
+
+.msgbox{
+  width: 60%;
+  height: 60%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.msger{
+  margin-top: 30px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.msger-bottom{
+  font-weight: 400;
+  font-size: 16px;
+}
+
+
+/* フォーム2 */
+.form-row{
+  background-color: #EBEBEB;
+}
+
+.form-2{
+  margin: auto;
+  padding: 40px 0;
+  border-bottom: 1px solid #d8d8d8;
+}
+
+.form-h1{
+  font-size: 46px;
+}
+
+.form-2-label{
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.second-form{
+  width: 80%; 
+}
+
+.form-row-under{
+  display: block;
+  text-align: center;
+  background-color: #EBEBEB;
+  padding: 40px 0;
+}
+
+.form-2-h{
+  font-weight: bolder;
+}
+
+
+
+/* フッター */
+
+.f-l-title{
+  font-size: 12px;
+  font-weight: 700;
+  color: #222222;
+  padding: 0 10px;
+}
+
+
+.footer{
+  background-color: #f7f7f7;
+}
+
+
+.footer-list ul li{
+  list-style-type: none;
+  font-size: 14px;
+  padding: 12px 0;
+}
+
+
+.footer-list ul li a{
+  color: #484848;
+  font-weight: 400;
+}
+
+
+.footer-list ul{
+  padding: 0 10px;
+}
+
+
+.f-space{
+  padding: 0 6px;
+}
+
+.f-a:hover{
+  color: #484848;
+  text-decoration-color: #484848;
+}
+
+.f-a{
+  color: #484848;
+}
+
+.f-text{
+  font-size: 14px;
+  color: #484848;
+}
+
+
+.footer .container{
+  padding: 0;
+}
+
+
+/* フッターのロゴ */
+
+.f-a-last{
+  color: black;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration-line: underline;
+}
+
+.f-a-last:hover{
+  color: #484848;
+}
+
+
+.f-a-logo{
+  color: black;
+  font-size: 18px;
+  
+}
+
+.f-a-logo:hover{
+  color: #484848;
+  text-decoration-line: none;
+}
+
+
+/* ハンバーガー */
+
+#checkbox{
+  display: none;
+}
+
+
+.sp-checked{
+  display: none;
+}
+
+
+
+
+.sp-form{
+  display: none;
+}
+
+.sp-section-2{
+  display: none;
+}
+
+@media (max-width: 768px){
+
+
+  .video{
+    width: 100%;
+    height: 540px;
+    object-fit: cover;
+    object-position: 100% 100%;
+  }
+
+
+  .content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: #fff;
+    width: 90%;
+    padding: 20px;
+  }
+
+  .navbar{
+    display: none;
+  }
+
+  .navbar-brand{
+    display: none;
+  }
+
+  /* ハンバーガーメニュー */
+  .sp-ul{
+    padding:50px 20px;
+  }
+
+  .sp-logo{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
+
+
+  .sp-checked{
+    background-color: white;
+    width: 100%;
+    height: auto;
+    z-index: 400;
+    position: absolute;
+    top: 0;
+    height: 1500px;
+    display: block;
+    transform: translateY(-2000px);
+    transition: .4s;
+  }
+
+
+  .sp-list ul{
+    margin: 15px 0;
+  }
+
+  .sp-list{
+    border-bottom: 1px solid #d8d8d8;
+  }
+
+  .list-bottom{
+    font-size: 14px;
+  }
+
+  .sp-list-a{
+    list-style-type: none;
+    padding: 15px 0;
+  }
+
+  .sp-list-a a{
+    color: #484848;
+  }
+
+
+  #checkbox:checked ~ .sp-checked{
+    transform: translateY(0);
+    transition: .4s;
+  }
+  /* ハンバーガーメニュー終わり */
+
+
+
+  .h1{
+    font-size: 30px;
+  }
+
+  .sp-form{
+    display: block;
+  }
+
+  .sp-form-a{
+    color: #008489;
+  }
+
+
+   .form-1, .form-p, .play, .pause{
+    display: none;
+  }
+
+  /* セクション１ */
+  .sec-1-h2{
+    font-size: 25px;
+    font-weight: 200;
+    margin-bottom: 20px;
+    border-top: 1px solid #ebebeb;
+  }
+
+
+  /* セクション２ */
+  .section-2{
+    margin-top: -20px;
+  }
+  
+  .text-box, .sec-text-bg-1{
+    display: none;
+  }
+
+  .sec-2-row{
+    display: block;
+    margin: 18px;
+  }
+
+
+
+  .sec-2-img-box{
+    width: 100%;
+    margin: 0;
+  }
+
+  .sec-2-img{
+    height: 380px;
+  }
+
+  .sp-sec-text-bg-1{
+    width: 100%;
+    height: 280px;
+    margin-top: 18px;
+  }
+
+  .sp-text-box{
+    padding: 20px 30px 0;
+  }
+
+  .sp-text-box .p{
+    font-size: 14px;
+    padding: 10px 0;
+  }
+
+  .sp-sec-2-h2{
+    font-size: 24px;
+  }
+
+  .sp-section-2{
+    display: block;
+  }
+
+
+  /* 2r */
+  .sec-text-bg-2{
+    background-color: #036B70;
+    height: 280px;
+    width: 100%;
+    margin: 0 0 18px 0;
+  }
+
+  .sec-2-h2{
+    font-size: 24px;
+  }
+
+  .text-box-2{
+    color: white;
+    width: 100%;
+    top: 15%;
+    left: 0;
+    transform: translate(0%, 0%);
+    padding: 20px 30px 0;
+  }
+  
+  .sec-2-h2{
+    font-size: 24px;
+  }
+
+  .text-box-2 .p{
+    font-size: 14px;
+    padding: 10px 0;
+  }
+
+
+  /* オプション */
+
+  .option-row{
+    margin: 0;
+    padding: 40px;
+    display: block;
+  }
+  
+  .option{
+    width: 100%;
+    margin: auto;
+    padding: 30px 30px 50px;
+    border-bottom: 1px solid white;
+  }
+
+  .option .h3{
+    font-size: 24px;
+  }
+  
+  .option .p{
+    font-size: 14px;
+  }
+  
+  .option-2{
+    width: 100%;
+    margin: auto;
+    padding: 50px 30px 30px;
+  }
+  
+  .option-2 .h3{
+    font-size: 24px;
+  }
+
+  .option-2 .p{
+    font-size: 14px;
+  }
+  
+
+  /* セクション3 */
+  .section-3{
+    margin-bottom: 18px;
+  }
+
+  .sec-3-img{
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    margin: 18px 0;
+  }
+
+  .msg-box{
+    background-color: #EBEBEB;
+    height: 290px;
+    line-height: 2;
+    font-size: 14px;
+    position: relative;
+  }
+
+  .msgbox{
+    width: 60%;
+    height: 60%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .msger{
+    margin-top: 10px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .msger-bottom{
+    font-weight: 400;
+    font-size: 16px;
+  }
+
+
+
+  /* フォーム2 */
+  .form-2{
+    margin: auto;
+    padding: 40px;
+    border-bottom: 1px solid #d8d8d8;
+    text-align: center;
+  }
+
+  .form-h1{
+    font-size: 24px;
+    font-weight: normal;
+  }
+
+  .form-2-label{
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  .second-form{
+    width: 100%; 
+  }
+
+  .form-row-under{
+    display: block;
+    text-align: center;
+    background-color: #EBEBEB;
+    padding: 40px;
+  }
+
+  .form-2-h{
+    font-weight: bolder;
+  }
+
+
+
+}
